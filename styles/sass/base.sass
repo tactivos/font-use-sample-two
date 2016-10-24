@@ -1,0 +1,737 @@
+=font-face($font-family, $file-name, $font-weight, $font-style)
+  $fontsPath: "../fonts/"
+  $timeStamp: "1476213069"
+  @font-face
+    font-family: $font-family
+    src: url("#{$fontsPath}#{$file-name}.woff?v=#{$timeStamp}") format("woff"), url("#{$fontsPath}#{$file-name}.ttf?v=#{$timeStamp}") format("truetype"), url("#{$fontsPath}#{$file-name}.svg##{$font-family}?v=#{$timeStamp}") format("svg")
+    font-weight: $font-weight
+    font-style: $font-style
+
++font-face(murally, "murally-webfont", normal, normal)
+
+
+$icon-size: 24px
+
+// Echo all glyphs as sass variables
+
+$m-air-balloon: "\EA01"
+$m-arrow-curve: "\EA02"
+$m-arrow-dashed: "\EA03"
+$m-arrow-dotted: "\EA04"
+$m-arrow-dotted-spaced: "\EA05"
+$m-arrow-double-tip: "\EA06"
+$m-arrow-line: "\EA07"
+$m-arrow-simple-tip: "\EA08"
+$m-arrow-straight: "\EA09"
+$m-arrow-style: "\EA0A"
+$m-arrow-switch-direction: "\EA0B"
+$m-arrow-switch-direction-alt: "\EA0C"
+$m-arrow-tip-style: "\EA0D"
+$m-arrow-tipless: "\EA0E"
+$m-btn-add-title: "\EA0F"
+$m-btn-all-murals: "\EA10"
+$m-btn-dropbox: "\EA11"
+$m-btn-mic: "\EA12"
+$m-btn-minimize: "\EA13"
+$m-btn-pause-outline: "\EA14"
+$m-btn-play-outline: "\EA15"
+$m-btn-plus-mobile: "\EA16"
+$m-btn-plus-slim: "\EA17"
+$m-btn-templates: "\EA18"
+$m-btn-add-to-cluster: "\EA19"
+$m-btn-bold-text: "\EA1A"
+$m-btn-border-color: "\EA1B"
+$m-btn-border-bold: "\EA1C"
+$m-btn-border-dotted: "\EA1D"
+$m-btn-border-extraheavy: "\EA1E"
+$m-btn-border-medium: "\EA1F"
+$m-btn-border-slim: "\EA20"
+$m-btn-border-weight: "\EA21"
+$m-btn-chat: "\EA22"
+$m-btn-chat-filled: "\EA23"
+$m-btn-cluster: "\EA24"
+$m-btn-cluster-column: "\EA25"
+$m-btn-cluster-grid-layout: "\EA26"
+$m-btn-cluster-row: "\EA27"
+$m-btn-copy: "\EA28"
+$m-btn-create: "\EA29"
+$m-btn-crop: "\EA2A"
+$m-btn-decrease-font: "\EA2B"
+$m-btn-download: "\EA2C"
+$m-btn-drag: "\EA2D"
+$m-btn-draw-mode: "\EA2E"
+$m-btn-edit-comment: "\EA2F"
+$m-btn-exit-full-screen: "\EA30"
+$m-btn-export: "\EA31"
+$m-btn-facilitation-tools: "\EA32"
+$m-btn-facilitation-tools-filled: "\EA33"
+$m-btn-fill-color: "\EA34"
+$m-btn-filters: "\EA35"
+$m-btn-filters-filled: "\EA36"
+$m-btn-follow-me: "\EA37"
+$m-btn-font-color: "\EA38"
+$m-btn-font-highlight: "\EA39"
+$m-btn-full-screen: "\EA3A"
+$m-btn-grid-view: "\EA3B"
+$m-btn-history: "\EA3C"
+$m-btn-history-filled: "\EA3D"
+$m-btn-image-thumb: "\EA3E"
+$m-btn-images: "\EA3F"
+$m-btn-increase-font: "\EA40"
+$m-btn-italic-text: "\EA41"
+$m-btn-join: "\EA42"
+$m-btn-keyboard: "\EA43"
+$m-btn-layouts: "\EA44"
+$m-btn-leave: "\EA45"
+$m-btn-link-url: "\EA46"
+$m-btn-list-view: "\EA47"
+$m-btn-members: "\EA48"
+$m-btn-next: "\EA49"
+$m-btn-no-border: "\EA4A"
+$m-btn-ordered-list: "\EA4B"
+$m-btn-outline: "\EA4C"
+$m-btn-outline-filled: "\EA4D"
+$m-btn-pin-comment: "\EA4E"
+$m-btn-play: "\EA4F"
+$m-btn-presentation: "\EA50"
+$m-btn-presentation-filled: "\EA51"
+$m-btn-presentation-next: "\EA52"
+$m-btn-presentation-next-filled: "\EA53"
+$m-btn-presentation-prev: "\EA54"
+$m-btn-presentation-prev-filled: "\EA55"
+$m-btn-prev: "\EA56"
+$m-btn-realtime-timer: "\EA57"
+$m-btn-redo: "\EA58"
+$m-btn-send-to-hub: "\EA59"
+$m-btn-settings: "\EA5A"
+$m-btn-settings-back: "\EA5B"
+$m-btn-shapes: "\EA5C"
+$m-btn-share: "\EA5D"
+$m-btn-share-contextual: "\EA5E"
+$m-btn-share-pointer: "\EA5F"
+$m-btn-show-info: "\EA60"
+$m-btn-sidebar-back: "\EA61"
+$m-btn-star: "\EA62"
+$m-btn-stickers: "\EA63"
+$m-btn-stickies: "\EA64"
+$m-btn-stroke-color: "\EA65"
+$m-btn-stroke-style: "\EA66"
+$m-btn-switch-format: "\EA67"
+$m-btn-switch-to-circle: "\EA68"
+$m-btn-switch-to-sticky: "\EA69"
+$m-btn-switch-to-sticky-big: "\EA6A"
+$m-btn-switch-to-sticky-small: "\EA6B"
+$m-btn-switch-to-textbox: "\EA6C"
+$m-btn-switch-to-title: "\EA6D"
+$m-btn-text-align-center: "\EA6E"
+$m-btn-text-align-left: "\EA6F"
+$m-btn-text-align-right: "\EA70"
+$m-btn-text-decoration-strike: "\EA71"
+$m-btn-text-decoration-underline: "\EA72"
+$m-btn-text-mode: "\EA73"
+$m-btn-text-tools: "\EA74"
+$m-btn-toggle-border: "\EA75"
+$m-btn-toggle-title-off: "\EA76"
+$m-btn-toggle-title-on: "\EA77"
+$m-btn-undo: "\EA78"
+$m-btn-unordered-list: "\EA79"
+$m-btn-unstar: "\EA7A"
+$m-btn-upload: "\EA7B"
+$m-btn-voting: "\EA7C"
+$m-btn-voting-filled: "\EA7D"
+$m-close-big: "\EA7E"
+$m-close-normal: "\EA7F"
+$m-close-slim: "\EA80"
+$m-close-small: "\EA81"
+$m-close-tiny: "\EA82"
+$m-comment-success: "\EA83"
+$m-contextual-add-sticky: "\EA84"
+$m-contextual-bring-to-back: "\EA85"
+$m-contextual-bring-to-front: "\EA86"
+$m-contextual-comment: "\EA87"
+$m-contextual-duplicate: "\EA88"
+$m-contextual-edit: "\EA89"
+$m-contextual-group: "\EA8A"
+$m-contextual-lock: "\EA8B"
+$m-contextual-paste: "\EA8C"
+$m-contextual-redo: "\EA8D"
+$m-contextual-select-all: "\EA8E"
+$m-contextual-trash: "\EA8F"
+$m-contextual-trash-filled: "\EA90"
+$m-contextual-undo: "\EA91"
+$m-dropdown-down: "\EA92"
+$m-dropdown-up: "\EA93"
+$m-help-icon: "\EA94"
+$m-icon-confidential: "\EA95"
+$m-icon-create-room: "\EA96"
+$m-icon-alert: "\EA97"
+$m-icon-at: "\EA98"
+$m-icon-check: "\EA99"
+$m-icon-check-small: "\EA9A"
+$m-icon-circle-down-arrow: "\EA9B"
+$m-icon-clock: "\EA9C"
+$m-icon-comment: "\EA9D"
+$m-icon-contract-arrow: "\EA9E"
+$m-icon-delete: "\EA9F"
+$m-icon-dropdown-arrow: "\EAA0"
+$m-icon-email: "\EAA1"
+$m-icon-email-sent: "\EAA2"
+$m-icon-enterprise: "\EAA3"
+$m-icon-expand-arrow: "\EAA4"
+$m-icon-info: "\EAA5"
+$m-icon-info-filled: "\EAA6"
+$m-icon-layers: "\EAA7"
+$m-icon-less: "\EAA8"
+$m-icon-more: "\EAA9"
+$m-icon-phone: "\EAAA"
+$m-icon-preview: "\EAAB"
+$m-icon-search: "\EAAC"
+$m-icon-settings: "\EAAD"
+$m-icon-ugly-lock: "\EAAE"
+$m-icon-ugly-notification: "\EAAF"
+$m-question-mark: "\EAB0"
+
+// Some commons rules
+[class^="m-"],
+[class*=" m-"],
+.m,
+.m-air-balloon,
+.m-arrow-curve,
+.m-arrow-dashed,
+.m-arrow-dotted,
+.m-arrow-dotted-spaced,
+.m-arrow-double-tip,
+.m-arrow-line,
+.m-arrow-simple-tip,
+.m-arrow-straight,
+.m-arrow-style,
+.m-arrow-switch-direction,
+.m-arrow-switch-direction-alt,
+.m-arrow-tip-style,
+.m-arrow-tipless,
+.m-btn-add-title,
+.m-btn-all-murals,
+.m-btn-dropbox,
+.m-btn-mic,
+.m-btn-minimize,
+.m-btn-pause-outline,
+.m-btn-play-outline,
+.m-btn-plus-mobile,
+.m-btn-plus-slim,
+.m-btn-templates,
+.m-btn-add-to-cluster,
+.m-btn-bold-text,
+.m-btn-border-color,
+.m-btn-border-bold,
+.m-btn-border-dotted,
+.m-btn-border-extraheavy,
+.m-btn-border-medium,
+.m-btn-border-slim,
+.m-btn-border-weight,
+.m-btn-chat,
+.m-btn-chat-filled,
+.m-btn-cluster,
+.m-btn-cluster-column,
+.m-btn-cluster-grid-layout,
+.m-btn-cluster-row,
+.m-btn-copy,
+.m-btn-create,
+.m-btn-crop,
+.m-btn-decrease-font,
+.m-btn-download,
+.m-btn-drag,
+.m-btn-draw-mode,
+.m-btn-edit-comment,
+.m-btn-exit-full-screen,
+.m-btn-export,
+.m-btn-facilitation-tools,
+.m-btn-facilitation-tools-filled,
+.m-btn-fill-color,
+.m-btn-filters,
+.m-btn-filters-filled,
+.m-btn-follow-me,
+.m-btn-font-color,
+.m-btn-font-highlight,
+.m-btn-full-screen,
+.m-btn-grid-view,
+.m-btn-history,
+.m-btn-history-filled,
+.m-btn-image-thumb,
+.m-btn-images,
+.m-btn-increase-font,
+.m-btn-italic-text,
+.m-btn-join,
+.m-btn-keyboard,
+.m-btn-layouts,
+.m-btn-leave,
+.m-btn-link-url,
+.m-btn-list-view,
+.m-btn-members,
+.m-btn-next,
+.m-btn-no-border,
+.m-btn-ordered-list,
+.m-btn-outline,
+.m-btn-outline-filled,
+.m-btn-pin-comment,
+.m-btn-play,
+.m-btn-presentation,
+.m-btn-presentation-filled,
+.m-btn-presentation-next,
+.m-btn-presentation-next-filled,
+.m-btn-presentation-prev,
+.m-btn-presentation-prev-filled,
+.m-btn-prev,
+.m-btn-realtime-timer,
+.m-btn-redo,
+.m-btn-send-to-hub,
+.m-btn-settings,
+.m-btn-settings-back,
+.m-btn-shapes,
+.m-btn-share,
+.m-btn-share-contextual,
+.m-btn-share-pointer,
+.m-btn-show-info,
+.m-btn-sidebar-back,
+.m-btn-star,
+.m-btn-stickers,
+.m-btn-stickies,
+.m-btn-stroke-color,
+.m-btn-stroke-style,
+.m-btn-switch-format,
+.m-btn-switch-to-circle,
+.m-btn-switch-to-sticky,
+.m-btn-switch-to-sticky-big,
+.m-btn-switch-to-sticky-small,
+.m-btn-switch-to-textbox,
+.m-btn-switch-to-title,
+.m-btn-text-align-center,
+.m-btn-text-align-left,
+.m-btn-text-align-right,
+.m-btn-text-decoration-strike,
+.m-btn-text-decoration-underline,
+.m-btn-text-mode,
+.m-btn-text-tools,
+.m-btn-toggle-border,
+.m-btn-toggle-title-off,
+.m-btn-toggle-title-on,
+.m-btn-undo,
+.m-btn-unordered-list,
+.m-btn-unstar,
+.m-btn-upload,
+.m-btn-voting,
+.m-btn-voting-filled,
+.m-close-big,
+.m-close-normal,
+.m-close-slim,
+.m-close-small,
+.m-close-tiny,
+.m-comment-success,
+.m-contextual-add-sticky,
+.m-contextual-bring-to-back,
+.m-contextual-bring-to-front,
+.m-contextual-comment,
+.m-contextual-duplicate,
+.m-contextual-edit,
+.m-contextual-group,
+.m-contextual-lock,
+.m-contextual-paste,
+.m-contextual-redo,
+.m-contextual-select-all,
+.m-contextual-trash,
+.m-contextual-trash-filled,
+.m-contextual-undo,
+.m-dropdown-down,
+.m-dropdown-up,
+.m-help-icon,
+.m-icon-confidential,
+.m-icon-create-room,
+.m-icon-alert,
+.m-icon-at,
+.m-icon-check,
+.m-icon-check-small,
+.m-icon-circle-down-arrow,
+.m-icon-clock,
+.m-icon-comment,
+.m-icon-contract-arrow,
+.m-icon-delete,
+.m-icon-dropdown-arrow,
+.m-icon-email,
+.m-icon-email-sent,
+.m-icon-enterprise,
+.m-icon-expand-arrow,
+.m-icon-info,
+.m-icon-info-filled,
+.m-icon-layers,
+.m-icon-less,
+.m-icon-more,
+.m-icon-phone,
+.m-icon-preview,
+.m-icon-search,
+.m-icon-settings,
+.m-icon-ugly-lock,
+.m-icon-ugly-notification,
+.m-question-mark,
+  font-family: "murally"
+  font-variant: normal
+  font-size: $icon-size
+  font-style: normal
+  text-transform: none
+  line-height: 1
+  speak: none
+  -webkit-font-smoothing: antialiased
+  display: inline-block
+  text-decoration: inherit
+
+// Output each item
+.m-air-balloon:after
+  content: "\EA01"
+.m-arrow-curve:after
+  content: "\EA02"
+.m-arrow-dashed:after
+  content: "\EA03"
+.m-arrow-dotted:after
+  content: "\EA04"
+.m-arrow-dotted-spaced:after
+  content: "\EA05"
+.m-arrow-double-tip:after
+  content: "\EA06"
+.m-arrow-line:after
+  content: "\EA07"
+.m-arrow-simple-tip:after
+  content: "\EA08"
+.m-arrow-straight:after
+  content: "\EA09"
+.m-arrow-style:after
+  content: "\EA0A"
+.m-arrow-switch-direction:after
+  content: "\EA0B"
+.m-arrow-switch-direction-alt:after
+  content: "\EA0C"
+.m-arrow-tip-style:after
+  content: "\EA0D"
+.m-arrow-tipless:after
+  content: "\EA0E"
+.m-btn-add-title:after
+  content: "\EA0F"
+.m-btn-all-murals:after
+  content: "\EA10"
+.m-btn-dropbox:after
+  content: "\EA11"
+.m-btn-mic:after
+  content: "\EA12"
+.m-btn-minimize:after
+  content: "\EA13"
+.m-btn-pause-outline:after
+  content: "\EA14"
+.m-btn-play-outline:after
+  content: "\EA15"
+.m-btn-plus-mobile:after
+  content: "\EA16"
+.m-btn-plus-slim:after
+  content: "\EA17"
+.m-btn-templates:after
+  content: "\EA18"
+.m-btn-add-to-cluster:after
+  content: "\EA19"
+.m-btn-bold-text:after
+  content: "\EA1A"
+.m-btn-border-color:after
+  content: "\EA1B"
+.m-btn-border-bold:after
+  content: "\EA1C"
+.m-btn-border-dotted:after
+  content: "\EA1D"
+.m-btn-border-extraheavy:after
+  content: "\EA1E"
+.m-btn-border-medium:after
+  content: "\EA1F"
+.m-btn-border-slim:after
+  content: "\EA20"
+.m-btn-border-weight:after
+  content: "\EA21"
+.m-btn-chat:after
+  content: "\EA22"
+.m-btn-chat-filled:after
+  content: "\EA23"
+.m-btn-cluster:after
+  content: "\EA24"
+.m-btn-cluster-column:after
+  content: "\EA25"
+.m-btn-cluster-grid-layout:after
+  content: "\EA26"
+.m-btn-cluster-row:after
+  content: "\EA27"
+.m-btn-copy:after
+  content: "\EA28"
+.m-btn-create:after
+  content: "\EA29"
+.m-btn-crop:after
+  content: "\EA2A"
+.m-btn-decrease-font:after
+  content: "\EA2B"
+.m-btn-download:after
+  content: "\EA2C"
+.m-btn-drag:after
+  content: "\EA2D"
+.m-btn-draw-mode:after
+  content: "\EA2E"
+.m-btn-edit-comment:after
+  content: "\EA2F"
+.m-btn-exit-full-screen:after
+  content: "\EA30"
+.m-btn-export:after
+  content: "\EA31"
+.m-btn-facilitation-tools:after
+  content: "\EA32"
+.m-btn-facilitation-tools-filled:after
+  content: "\EA33"
+.m-btn-fill-color:after
+  content: "\EA34"
+.m-btn-filters:after
+  content: "\EA35"
+.m-btn-filters-filled:after
+  content: "\EA36"
+.m-btn-follow-me:after
+  content: "\EA37"
+.m-btn-font-color:after
+  content: "\EA38"
+.m-btn-font-highlight:after
+  content: "\EA39"
+.m-btn-full-screen:after
+  content: "\EA3A"
+.m-btn-grid-view:after
+  content: "\EA3B"
+.m-btn-history:after
+  content: "\EA3C"
+.m-btn-history-filled:after
+  content: "\EA3D"
+.m-btn-image-thumb:after
+  content: "\EA3E"
+.m-btn-images:after
+  content: "\EA3F"
+.m-btn-increase-font:after
+  content: "\EA40"
+.m-btn-italic-text:after
+  content: "\EA41"
+.m-btn-join:after
+  content: "\EA42"
+.m-btn-keyboard:after
+  content: "\EA43"
+.m-btn-layouts:after
+  content: "\EA44"
+.m-btn-leave:after
+  content: "\EA45"
+.m-btn-link-url:after
+  content: "\EA46"
+.m-btn-list-view:after
+  content: "\EA47"
+.m-btn-members:after
+  content: "\EA48"
+.m-btn-next:after
+  content: "\EA49"
+.m-btn-no-border:after
+  content: "\EA4A"
+.m-btn-ordered-list:after
+  content: "\EA4B"
+.m-btn-outline:after
+  content: "\EA4C"
+.m-btn-outline-filled:after
+  content: "\EA4D"
+.m-btn-pin-comment:after
+  content: "\EA4E"
+.m-btn-play:after
+  content: "\EA4F"
+.m-btn-presentation:after
+  content: "\EA50"
+.m-btn-presentation-filled:after
+  content: "\EA51"
+.m-btn-presentation-next:after
+  content: "\EA52"
+.m-btn-presentation-next-filled:after
+  content: "\EA53"
+.m-btn-presentation-prev:after
+  content: "\EA54"
+.m-btn-presentation-prev-filled:after
+  content: "\EA55"
+.m-btn-prev:after
+  content: "\EA56"
+.m-btn-realtime-timer:after
+  content: "\EA57"
+.m-btn-redo:after
+  content: "\EA58"
+.m-btn-send-to-hub:after
+  content: "\EA59"
+.m-btn-settings:after
+  content: "\EA5A"
+.m-btn-settings-back:after
+  content: "\EA5B"
+.m-btn-shapes:after
+  content: "\EA5C"
+.m-btn-share:after
+  content: "\EA5D"
+.m-btn-share-contextual:after
+  content: "\EA5E"
+.m-btn-share-pointer:after
+  content: "\EA5F"
+.m-btn-show-info:after
+  content: "\EA60"
+.m-btn-sidebar-back:after
+  content: "\EA61"
+.m-btn-star:after
+  content: "\EA62"
+.m-btn-stickers:after
+  content: "\EA63"
+.m-btn-stickies:after
+  content: "\EA64"
+.m-btn-stroke-color:after
+  content: "\EA65"
+.m-btn-stroke-style:after
+  content: "\EA66"
+.m-btn-switch-format:after
+  content: "\EA67"
+.m-btn-switch-to-circle:after
+  content: "\EA68"
+.m-btn-switch-to-sticky:after
+  content: "\EA69"
+.m-btn-switch-to-sticky-big:after
+  content: "\EA6A"
+.m-btn-switch-to-sticky-small:after
+  content: "\EA6B"
+.m-btn-switch-to-textbox:after
+  content: "\EA6C"
+.m-btn-switch-to-title:after
+  content: "\EA6D"
+.m-btn-text-align-center:after
+  content: "\EA6E"
+.m-btn-text-align-left:after
+  content: "\EA6F"
+.m-btn-text-align-right:after
+  content: "\EA70"
+.m-btn-text-decoration-strike:after
+  content: "\EA71"
+.m-btn-text-decoration-underline:after
+  content: "\EA72"
+.m-btn-text-mode:after
+  content: "\EA73"
+.m-btn-text-tools:after
+  content: "\EA74"
+.m-btn-toggle-border:after
+  content: "\EA75"
+.m-btn-toggle-title-off:after
+  content: "\EA76"
+.m-btn-toggle-title-on:after
+  content: "\EA77"
+.m-btn-undo:after
+  content: "\EA78"
+.m-btn-unordered-list:after
+  content: "\EA79"
+.m-btn-unstar:after
+  content: "\EA7A"
+.m-btn-upload:after
+  content: "\EA7B"
+.m-btn-voting:after
+  content: "\EA7C"
+.m-btn-voting-filled:after
+  content: "\EA7D"
+.m-close-big:after
+  content: "\EA7E"
+.m-close-normal:after
+  content: "\EA7F"
+.m-close-slim:after
+  content: "\EA80"
+.m-close-small:after
+  content: "\EA81"
+.m-close-tiny:after
+  content: "\EA82"
+.m-comment-success:after
+  content: "\EA83"
+.m-contextual-add-sticky:after
+  content: "\EA84"
+.m-contextual-bring-to-back:after
+  content: "\EA85"
+.m-contextual-bring-to-front:after
+  content: "\EA86"
+.m-contextual-comment:after
+  content: "\EA87"
+.m-contextual-duplicate:after
+  content: "\EA88"
+.m-contextual-edit:after
+  content: "\EA89"
+.m-contextual-group:after
+  content: "\EA8A"
+.m-contextual-lock:after
+  content: "\EA8B"
+.m-contextual-paste:after
+  content: "\EA8C"
+.m-contextual-redo:after
+  content: "\EA8D"
+.m-contextual-select-all:after
+  content: "\EA8E"
+.m-contextual-trash:after
+  content: "\EA8F"
+.m-contextual-trash-filled:after
+  content: "\EA90"
+.m-contextual-undo:after
+  content: "\EA91"
+.m-dropdown-down:after
+  content: "\EA92"
+.m-dropdown-up:after
+  content: "\EA93"
+.m-help-icon:after
+  content: "\EA94"
+.m-icon-confidential:after
+  content: "\EA95"
+.m-icon-create-room:after
+  content: "\EA96"
+.m-icon-alert:after
+  content: "\EA97"
+.m-icon-at:after
+  content: "\EA98"
+.m-icon-check:after
+  content: "\EA99"
+.m-icon-check-small:after
+  content: "\EA9A"
+.m-icon-circle-down-arrow:after
+  content: "\EA9B"
+.m-icon-clock:after
+  content: "\EA9C"
+.m-icon-comment:after
+  content: "\EA9D"
+.m-icon-contract-arrow:after
+  content: "\EA9E"
+.m-icon-delete:after
+  content: "\EA9F"
+.m-icon-dropdown-arrow:after
+  content: "\EAA0"
+.m-icon-email:after
+  content: "\EAA1"
+.m-icon-email-sent:after
+  content: "\EAA2"
+.m-icon-enterprise:after
+  content: "\EAA3"
+.m-icon-expand-arrow:after
+  content: "\EAA4"
+.m-icon-info:after
+  content: "\EAA5"
+.m-icon-info-filled:after
+  content: "\EAA6"
+.m-icon-layers:after
+  content: "\EAA7"
+.m-icon-less:after
+  content: "\EAA8"
+.m-icon-more:after
+  content: "\EAA9"
+.m-icon-phone:after
+  content: "\EAAA"
+.m-icon-preview:after
+  content: "\EAAB"
+.m-icon-search:after
+  content: "\EAAC"
+.m-icon-settings:after
+  content: "\EAAD"
+.m-icon-ugly-lock:after
+  content: "\EAAE"
+.m-icon-ugly-notification:after
+  content: "\EAAF"
+.m-question-mark:after
+  content: "\EAB0"
